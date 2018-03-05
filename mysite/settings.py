@@ -139,8 +139,10 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.google.GoogleOAuth2', # Google
     'social_core.backends.facebook.FacebookOAuth2', # Facebook
+    'my_user.my_auth.UserBackend', # 우리가 만든 AUTH를 먼저 검사
     'django.contrib.auth.backends.ModelBackend', # Django 기본 유저모델
 ]
+
 
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
